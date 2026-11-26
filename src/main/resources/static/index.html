@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Keeper Tasks</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+</head>
+<body>
+<main class="app">
+    <h1>Keeper Tasks</h1>
+
+    <form id="task-form" class="task-form">
+        <label for="task-title">Task title</label>
+        <div class="task-entry">
+            <input id="task-title" name="title" type="text" autocomplete="off">
+            <button type="submit">Add</button>
+        </div>
+        <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+    </form>
+
+    <section aria-labelledby="task-list-heading">
+        <h2 id="task-list-heading">Tasks</h2>
+        <nav class="filters" aria-label="Filter tasks">
+            <button type="button" class="filter-button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-button" data-filter="active" aria-pressed="false">Active</button>
+            <button type="button" class="filter-button" data-filter="done" aria-pressed="false">Done</button>
+        </nav>
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-message" class="empty-message">No tasks yet.</p>
+    </section>
+</main>
+</body>
+</html>

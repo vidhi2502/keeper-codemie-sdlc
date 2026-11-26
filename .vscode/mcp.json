@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "atlassian": {
+      "type": "stdio",
+      "command": "py",
+      "args": [
+        "-3.12",
+        "-m",
+        "uv",
+        "tool",
+        "run",
+        "--from",
+        "mcp-atlassian",
+        "mcp-atlassian",
+        "--env-file",
+        "${workspaceFolder}/.env"
+      ]
+    }
+  }
+}
